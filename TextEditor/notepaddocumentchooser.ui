@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>NotepadDocumentChooser</class>
+    <widget class="QMainWindow" name="NotepadDocumentChooser">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>600</width>
+                <height>400</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Select document</string>
+        </property>
+        <widget class="QWidget" name="centralWidget">
+            <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_2">
+                        <property name="sizeConstraint">
+                            <enum>QLayout::SetDefaultConstraint</enum>
+                        </property>
+                        <item>
+                            <widget class="QListView" name="listView"/>
+                        </item>
+                        <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout">
+                                <item>
+                                    <widget class="QPushButton" name="newPushButton">
+                                        <property name="text">
+                                            <string>New document</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="openPushButton">
+                                        <property name="text">
+                                            <string>Open</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="modifyPushButton">
+                                        <property name="text">
+                                            <string>Modify</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="deletePushButton">
+                                        <property name="text">
+                                            <string>Delete</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="importURL">
+                                        <property name="text">
+                                            <string>Add document with URL</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </item>
+                    </layout>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QMenuBar" name="menuBar">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>400</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <widget class="QMenu" name="menuFile">
+                <property name="title">
+                    <string>File</string>
+                </property>
+                <addaction name="actionSettings"/>
+                <addaction name="actionLogout"/>
+                <addaction name="actionExit"/>
+            </widget>
+            <widget class="QMenu" name="menuHelp">
+                <property name="title">
+                    <string>Help</string>
+                </property>
+                <addaction name="actionAbout"/>
+            </widget>
+            <addaction name="menuFile"/>
+            <addaction name="menuHelp"/>
+        </widget>
+        <action name="actionLogout">
+            <property name="icon">
+                <iconset theme="exit.png" resource="notepad.qrc">
+                    <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+            </property>
+            <property name="text">
+                <string>Logout</string>
+            </property>
+            <property name="toolTip">
+                <string>Logout</string>
+            </property>
+            <property name="shortcut">
+            </property>
+        </action>
+        <action name="actionExit">
+            <property name="icon">
+                <iconset theme="exit.png" resource="notepad.qrc">
+                    <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+            </property>
+            <property name="text">
+                <string>Exit</string>
+            </property>
+            <property name="toolTip">
+                <string>Exit notepad</string>
+            </property>
+            <property name="shortcut">
+            </property>
+        </action>
+        <action name="actionAbout">
+            <property name="icon">
+                <iconset resource="notepad.qrc">
+                    <normaloff>:/images/info.png</normaloff>:/images/info.png</iconset>
+            </property>
+            <property name="text">
+                <string>About</string>
+            </property>
+            <property name="toolTip">
+                <string>About Text Editor</string>
+            </property>
+        </action>
+        <action name="actionSettings">
+            <property name="icon">
+                <iconset theme="settings.png" resource="notepad.qrc">
+                    <normaloff>:/images/settings.png</normaloff>:/images/settings.png</iconset>
+            </property>
+            <property name="text">
+                <string>Settings</string>
+            </property>
+            <property name="toolTip">
+                <string>Change settings</string>
+            </property>
+            <property name="shortcut">
+            </property>
+        </action>
+    </widget>
+    <layoutdefault spacing="6" margin="11"/>
+    <resources>
+        <include location="notepad.qrc"/>
+    </resources>
+    <connections/>
+</ui>
